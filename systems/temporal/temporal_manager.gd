@@ -13,7 +13,7 @@ func register_rewindable(node: Node) -> void:
 		return
 	
 	if not _snapshot_buffers.has(node):
-		var buffer: Array[PhysicsSnapshot] = []
+		var buffer: Array[TemporalSnapshot] = []
 		_snapshot_buffers[node] = buffer
 
 func has_rewindable(node: Node) -> bool:
@@ -25,8 +25,8 @@ func record_snapshot() -> void:
 	
 	for node in _snapshot_buffers:
 		if is_instance_valid(node) and node.has_method("save_state"):
-			var snapshot: PhysicsSnapshot = node.save_state()
-			var buffer: Array[PhysicsSnapshot] = _snapshot_buffers[node]
+			var snapshot: TemporalSnapshot = node.save_state()
+			var buffer: Array[TemporalSnapshot] = _snapshot_buffers[node]
 			buffer.push_back(snapshot)
 			
 			if buffer.size() > max_snapshots:
@@ -38,7 +38,7 @@ func record_snapshot() -> void:
 	for node in invalid_nodes:
 		_snapshot_buffers.erase(node)
 
-func get_snapshots_for(node: Node) -> Array[PhysicsSnapshot]:
+func get_snapshots_for(node: Node) -> Array[TemporalSnapshot]:
 	if _snapshot_buffers.has(node):
 		return _snapshot_buffers[node]
 	return []
@@ -47,14 +47,14 @@ func rewind_object(node: Node, steps: int) -> void:
 	if not _snapshot_buffers.has(node):
 		return
 	
-	var buffer: Array[PhysicsSnapshot] = _snapshot_buffers[node]
+	var buffer: Array[TemporalSnapshot] = _snapshot_buffers[node]
 	var size := buffer.size()
 	
 	if size == 0:
 		return
 		
 	var target_index := clampi(size - 1 - steps, 0, size - 1)
-	var snapshot: PhysicsSnapshot = buffer[target_index]
+	var snapshot: TemporalSnapshot = buffer[target_index]
 	
 	if node.has_method("load_state"):
 		node.load_state(snapshot)

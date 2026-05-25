@@ -45,7 +45,7 @@ func test_take_snapshot() -> void:
 	
 	temporal_manager.record_snapshot()
 	
-	var buffer: Array[PhysicsSnapshot] = temporal_manager.get_snapshots_for(dummy)
+	var buffer: Array[TemporalSnapshot] = temporal_manager.get_snapshots_for(dummy)
 	assert_eq(buffer.size(), 1, "Should have 1 snapshot")
 	assert_eq(buffer[0].position, Vector2(10, 10), "Snapshot position should match")
 	assert_eq(buffer[0].linear_velocity, Vector2(5, 5), "Snapshot velocity should match")
@@ -58,7 +58,7 @@ func test_circular_buffer_limit() -> void:
 		dummy.position = Vector2(i, i)
 		temporal_manager.record_snapshot()
 		
-	var buffer: Array[PhysicsSnapshot] = temporal_manager.get_snapshots_for(dummy)
+	var buffer: Array[TemporalSnapshot] = temporal_manager.get_snapshots_for(dummy)
 	assert_eq(buffer.size(), 3, "Buffer should not exceed max_snapshots limit")
 	assert_eq(buffer[0].position, Vector2(2, 2), "Oldest snapshot should have position 2,2 after shifting")
 	assert_eq(buffer[2].position, Vector2(4, 4), "Newest snapshot should have position 4,4")
