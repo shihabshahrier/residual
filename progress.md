@@ -17,12 +17,15 @@ This document tracks completed tasks, active bugs, and upcoming features for the
 - Phase 10: Palimpsest Lens Integration (Scanner overlay, Temporal Raycast, TestBox).
 - Phase 11: Final Polish & Integration (Connecting Dialogue branch execution to Epistemic unlocks).
 - Phase 12: The First Case (Narrative Design) (Created Broken Synthesizer case).
+- Phase 13: The Vertical Slice (Added Main Menu, Pause Menu, Scene Manager, packaged Level 1).
 
 ## 🚧 In Progress
-- All core architecture and prototyping phases (1-11) are complete! The project is ready for content scaling.
+- The initial prototype vertical slice of RESIDUAL is fully completed!
 
 ## 🐛 Active Bugs / Issues
 - None yet.
 
 ## 📅 Upcoming (Next Phases)
-- Create official art assets (sprites, 3D modular kits).
+- Replace CSG placeholder graphics with final 2.5D modular kits.
+- Polish Lyra's sprites and animations.
+- Expand the game with additional cases, levels, and deeper lore.
