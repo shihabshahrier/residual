@@ -12,14 +12,14 @@ This document tracks completed tasks, active bugs, and upcoming features for the
 - Phase 5: Epistemic Graph System (EpistemicManager, Nodes).
 - Phase 6: Dialogue Integration (Dialogue Manager, DialogueState).
 - Phase 7: Character & Environment Prototyping (LyraController).
+- Phase 8: Base Level Prototype & Visual Setup (Lyra 2.5D, test_level.tscn, Dialogue Balloon).
 
 ## 🚧 In Progress
-- Initial planning and setup complete. Ready for full scene construction.
+- Waiting for user's next directive.
 
 ## 🐛 Active Bugs / Issues
 - None yet.
 
 ## 📅 Upcoming (Next Phases)
-- Build out the first environment prototype block.
-- Create 2.5D billboard sprites and attach them to LyraController.
-- Connect DialogueManager visuals to the DialogueState backend.
+- Expand the Epistemic Graph UI (Clue Board visual implementation).
+- Integrate the PalimpsestLens mechanic into Lyra's controls to trigger the shader.
