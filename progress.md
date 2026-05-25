@@ -14,6 +14,7 @@ This document tracks completed tasks, active bugs, and upcoming features for the
 - Phase 7: Character & Environment Prototyping (LyraController).
 - Phase 8: Base Level Prototype & Visual Setup (Lyra 2.5D, test_level.tscn, Dialogue Balloon).
 - Phase 9: Epistemic Graph UI (Clue Board GraphEdit and ClueNodes).
+- Phase 10: Palimpsest Lens Integration (Scanner overlay, Temporal Raycast, TestBox).
 
 ## 🚧 In Progress
 - Waiting for user's next directive.
@@ -22,4 +23,4 @@ This document tracks completed tasks, active bugs, and upcoming features for the
 - None yet.
 
 ## 📅 Upcoming (Next Phases)
-- Integrate the PalimpsestLens mechanic into Lyra's controls to trigger the scanner shader.
+- Final Polish & Integration (Connecting Dialogue branch execution to actual Epistemic unlocks in-game).

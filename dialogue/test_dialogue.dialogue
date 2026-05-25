@@ -5,7 +5,9 @@ if DialogueState.has_clue("bloody_palm_print")
 	Lyra: Wait, I remember this. A bloody palm print. Someone was here recently.
 	=> ending
 else
-	Lyra: The Vestiges are faint. I can't reconstruct anything useful yet.
+	Lyra: The Vestiges are faint. Let me try to reconstruct something.
+	do DialogueState.add_clue("bloody_palm_print", "Bloody Palm Print", "Found near the entrance. Still fresh.")
+	Lyra: There... I've isolated a memory. A bloody palm print. I should check the Clue Board.
 	=> ending
 
 ~ ending
