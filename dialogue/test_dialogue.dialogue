@@ -1,0 +1,13 @@
+~ start
+
+Lyra: The air here is heavy... like trying to breathe underwater.
+if DialogueState.has_clue("bloody_palm_print")
+	Lyra: Wait, I remember this. A bloody palm print. Someone was here recently.
+	=> ending
+else
+	Lyra: The Vestiges are faint. I can't reconstruct anything useful yet.
+	=> ending
+
+~ ending
+Lyra: I need to keep looking. The Mnemosyne Lattice is hiding something.
+=> END
