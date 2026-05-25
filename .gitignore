@@ -1,0 +1,17 @@
+# Godot 4+ specific ignores
+.godot/
+.export/
+export_presets.cfg
+*.import
+
+# System/OS ignores
+.DS_Store
+Thumbs.db
+
+# If you use mono/C#
+.mono/
+*.sln
+*.csproj
+*.csproj.user
+obj/
+bin/
