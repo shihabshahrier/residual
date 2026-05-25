@@ -18,14 +18,13 @@ This document tracks completed tasks, active bugs, and upcoming features for the
 - Phase 11: Final Polish & Integration (Connecting Dialogue branch execution to Epistemic unlocks).
 - Phase 12: The First Case (Narrative Design) (Created Broken Synthesizer case).
 - Phase 13: The Vertical Slice (Added Main Menu, Pause Menu, Scene Manager, packaged Level 1).
+- Phase 14: Asset Integration (Generated and applied bespoke AI art for Lyra and sci-fi walls).
 
 ## 🚧 In Progress
-- The initial prototype vertical slice of RESIDUAL is fully completed!
+- The initial prototype vertical slice of RESIDUAL is fully completed and visually upgraded!
 
 ## 🐛 Active Bugs / Issues
 - None yet.
 
 ## 📅 Upcoming (Next Phases)
-- Replace CSG placeholder graphics with final 2.5D modular kits.
-- Polish Lyra's sprites and animations.
 - Expand the game with additional cases, levels, and deeper lore.
