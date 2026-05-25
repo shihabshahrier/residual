@@ -24,6 +24,7 @@ window/stretch/mode="canvas_items"
 [autoload]
 
 TemporalManager="*res://systems/temporal/temporal_manager.gd"
+EpistemicManager="*res://systems/epistemic/epistemic_manager.gd"
 
 [editor_plugins]
 
