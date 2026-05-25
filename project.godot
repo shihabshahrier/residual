@@ -25,10 +25,11 @@ window/stretch/mode="canvas_items"
 
 TemporalManager="*res://systems/temporal/temporal_manager.gd"
 EpistemicManager="*res://systems/epistemic/epistemic_manager.gd"
+DialogueState="*res://systems/dialogue/dialogue_state.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+enabled=PackedStringArray("res://addons/gut/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
 
 [rendering]
 
