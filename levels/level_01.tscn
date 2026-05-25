@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" path="res://systems/temporal/test_box.tscn" id="2_test_box"]
 [ext_resource type="PackedScene" path="res://systems/dialogue/vestige_interactable.tscn" id="3_vestige"]
 [ext_resource type="PackedScene" path="res://systems/dialogue/glass_interactable.tscn" id="4_glass"]
+[ext_resource type="PackedScene" path="res://ui/menus/pause_menu.tscn" id="5_pause"]
 
 [sub_resource type="Environment" id="Environment_test"]
 background_mode = 1
@@ -50,3 +51,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -4)
 
 [node name="GlassInteractable" parent="." instance=ExtResource("4_glass")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4)
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_pause")]

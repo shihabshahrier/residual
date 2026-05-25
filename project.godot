@@ -12,6 +12,7 @@ config_version=5
 
 config/name="RESIDUAL"
 config/description="A 2.5D Forensic Metaphysics Detective Game"
+run/main_scene="res://ui/menus/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
@@ -23,6 +24,7 @@ window/stretch/mode="canvas_items"
 
 [autoload]
 
+SceneManager="*res://systems/scene_manager.gd"
 TemporalManager="*res://systems/temporal/temporal_manager.gd"
 EpistemicManager="*res://systems/epistemic/epistemic_manager.gd"
 DialogueState="*res://systems/dialogue/dialogue_state.gd"
