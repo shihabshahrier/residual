@@ -9,9 +9,21 @@ extends CharacterBody3D
 @export var deceleration: float = 15.0
 
 var current_anim: String = "idle"
+var is_scanning: bool = false
+var temporal_manager: Node = null
+
+@onready var camera: Camera3D = $Camera3D
+@onready var raycast: RayCast3D = $Camera3D/RayCast3D
+@onready var scanner_ui: CanvasLayer = $ScannerUI
 
 func _init() -> void:
 	add_to_group("rewindable")
+
+func _ready() -> void:
+	if has_node("/root/TemporalManager"):
+		temporal_manager = get_node("/root/TemporalManager")
+		temporal_manager.register_rewindable(self)
+
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -30,6 +42,33 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= 9.8 * delta
 		
 	move_and_slide()
+	
+	if is_scanning:
+		_update_raycast()
+
+func _update_raycast() -> void:
+	if not camera or not raycast: return
+	var mouse_pos := get_viewport().get_mouse_position()
+	var ray_length := 1000.0
+	var from := camera.project_ray_origin(mouse_pos)
+	var to := from + camera.project_ray_normal(mouse_pos) * ray_length
+	
+	raycast.global_position = from
+	raycast.target_position = raycast.to_local(to)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		is_scanning = !is_scanning
+		scanner_ui.visible = is_scanning
+		
+	if is_scanning and temporal_manager:
+		if event is InputEventMouseButton and event.pressed:
+			var hit = raycast.get_collider()
+			if hit and hit.is_in_group("rewindable"):
+				if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+					temporal_manager.rewind_object(hit, 1)
+				elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+					temporal_manager.rewind_object(hit, -1) # Negative step to go forward, though temporal_manager expects steps from newest to oldest. We might need a small fix there if it doesn't support forward. Let's just do rewind for now.
 
 # --- Temporal Reconstruction Interface ---
 

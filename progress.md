@@ -13,6 +13,7 @@ This document tracks completed tasks, active bugs, and upcoming features for the
 - Phase 6: Dialogue Integration (Dialogue Manager, DialogueState).
 - Phase 7: Character & Environment Prototyping (LyraController).
 - Phase 8: Base Level Prototype & Visual Setup (Lyra 2.5D, test_level.tscn, Dialogue Balloon).
+- Phase 9: Epistemic Graph UI (Clue Board GraphEdit and ClueNodes).
 
 ## 🚧 In Progress
 - Waiting for user's next directive.
@@ -21,5 +22,4 @@ This document tracks completed tasks, active bugs, and upcoming features for the
 - None yet.
 
 ## 📅 Upcoming (Next Phases)
-- Expand the Epistemic Graph UI (Clue Board visual implementation).
-- Integrate the PalimpsestLens mechanic into Lyra's controls to trigger the shader.
+- Integrate the PalimpsestLens mechanic into Lyra's controls to trigger the scanner shader.
