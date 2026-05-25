@@ -15,12 +15,14 @@ This document tracks completed tasks, active bugs, and upcoming features for the
 - Phase 8: Base Level Prototype & Visual Setup (Lyra 2.5D, test_level.tscn, Dialogue Balloon).
 - Phase 9: Epistemic Graph UI (Clue Board GraphEdit and ClueNodes).
 - Phase 10: Palimpsest Lens Integration (Scanner overlay, Temporal Raycast, TestBox).
+- Phase 11: Final Polish & Integration (Connecting Dialogue branch execution to Epistemic unlocks).
 
 ## 🚧 In Progress
-- Waiting for user's next directive.
+- All core architecture and prototyping phases (1-11) are complete! The project is ready for content scaling.
 
 ## 🐛 Active Bugs / Issues
 - None yet.
 
 ## 📅 Upcoming (Next Phases)
-- Final Polish & Integration (Connecting Dialogue branch execution to actual Epistemic unlocks in-game).
+- Create official art assets (sprites, 3D modular kits).
+- Write full dialogue and clue logic for the "First Case".

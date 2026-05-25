@@ -1,0 +1,10 @@
+~ start
+
+if DialogueState.has_clue("clue_shattered_glass")
+	Lyra: The shards are scattered inward. Someone hit this terminal from the outside with heavy force.
+	=> END
+else
+	Lyra: The terminal is completely destroyed. Wait... looking closely at the fracture pattern on the glass.
+	do DialogueState.add_clue("clue_shattered_glass", "Shattered Glass", "The terminal glass is shattered inward, suggesting external blunt force trauma, not an internal pressure explosion.")
+	Lyra: This doesn't look like an internal overload. I should connect this to the official report on the Clue Board.
+	=> END

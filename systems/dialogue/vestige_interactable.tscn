@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://systems/dialogue/vestige_interactable.gd" id="1_vestige"]
-[ext_resource type="Resource" path="res://dialogue/test_dialogue.dialogue" id="2_dialogue"]
+[ext_resource type="Resource" path="res://dialogue/case_01_drone.dialogue" id="2_dialogue"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vestige"]
 radius = 2.0

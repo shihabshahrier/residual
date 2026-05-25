@@ -1,0 +1,18 @@
+~ start
+
+if DialogueState.has_contradiction("clue_maintenance_log", "clue_shattered_glass")
+	Lyra: The log was clean yesterday, and the glass was shattered by an external impact, not an overload.
+	Lyra: This wasn't a malfunction. Someone broke it.
+	Drone Vestige: [BZZT] PROCESSING LOGIC ERROR... REVISING STATUS. SABOTAGE CONFIRMED.
+	=> END
+elif DialogueState.has_clue("clue_maintenance_log")
+	Drone Vestige: [BZZT] TERMINAL STATUS: MALFUNCTION. CAUSE: INTERNAL OVERLOAD.
+	Lyra: An internal overload? The log says otherwise. I should investigate the terminal debris using the Palimpsest.
+	=> END
+else
+	Drone Vestige: [BZZT] TERMINAL STATUS: MALFUNCTION. CAUSE: INTERNAL OVERLOAD.
+	Lyra: What happened here? Let me check the maintenance records.
+	do DialogueState.add_clue("clue_maintenance_log", "Maintenance Log", "The terminal was in perfect condition 24 hours ago. No signs of system strain.")
+	Drone Vestige: [BZZT] MAINTENANCE LOG EXTRACTED.
+	Lyra: Got it. I should review this on the Clue Board.
+	=> END
