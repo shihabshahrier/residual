@@ -1,4 +1,3 @@
-class_name TemporalManager
 extends Node
 
 ## Manages temporal state recording and rewinding for entities.

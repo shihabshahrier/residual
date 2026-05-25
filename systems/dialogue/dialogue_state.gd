@@ -1,4 +1,3 @@
-class_name DialogueState
 extends Node
 
 ## Autoload used by Godot Dialogue Manager to query the state of the investigation.

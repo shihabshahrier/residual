@@ -1,4 +1,3 @@
-class_name SceneManager
 extends Node
 
 ## Autoload for handling global scene transitions and game state (e.g. pausing).

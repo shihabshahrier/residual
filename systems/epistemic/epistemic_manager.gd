@@ -1,4 +1,3 @@
-class_name EpistemicManager
 extends Node
 
 ## Manages the state of the Epistemic Graph (Clue Board), keeping track of nodes and connections.
@@ -18,11 +17,11 @@ func add_node(node_data: EpistemicNodeData) -> void:
 		_nodes[node_data.id] = node_data
 		node_added.emit(node_data)
 
-func has_node(id: String) -> bool:
+func has_epistemic_node(id: String) -> bool:
 	return _nodes.has(id)
 
 func connect_nodes(from_id: String, to_id: String) -> bool:
-	if not has_node(from_id) or not has_node(to_id):
+	if not has_epistemic_node(from_id) or not has_epistemic_node(to_id):
 		return false
 		
 	if are_connected(from_id, to_id):
@@ -44,7 +43,7 @@ func are_connected(from_id: String, to_id: String) -> bool:
 	return false
 
 func has_contradiction(id_a: String, id_b: String) -> bool:
-	if not has_node(id_a) or not has_node(id_b):
+	if not has_epistemic_node(id_a) or not has_epistemic_node(id_b):
 		return false
 		
 	var node_a: EpistemicNodeData = _nodes[id_a]
