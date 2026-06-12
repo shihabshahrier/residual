@@ -32,3 +32,7 @@ In a dying orbital city where reality itself is reconstructed from archived memo
 
 - **Visuals:** Sacred decay, restrained neon, volumetric fog, large negative space, and deep shadows.
 - **Audio:** Analog interference, slowed tape hiss, cold industrial ambience, and distant choirs.
+
+---
+
+📖 **Project page:** https://shihub.online/projects/residual
